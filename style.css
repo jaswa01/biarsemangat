@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LOVE BACKGROUND */
+.bg-love span {
+  position: fixed;
+  bottom: -20px;
+  font-size: 40px;
+  color: rgba(255, 105, 180, 0.25);
+  animation: bgFloat linear infinite;
+  pointer-events: none;
+  z-index: -1;
+  filter: blur(1px);
+}
+
+@keyframes bgFloat {
+  to {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
+}
+
+.wrapper {
+  position: relative;
+  text-align: center;
+}
+
+/* ENVELOPE */
+.envelope {
+  width: 240px;
+  height: 160px;
+  background: rgba(255,255,255,0.45);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  box-shadow: 0 0 40px rgba(186,85,211,0.5);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #6a1b9a;
+}
+
+.envelope p {
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.flap {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  background: rgba(255,255,255,0.65);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.icon {
+  font-size: 42px;
+}
+
+/* LETTER */
+.letter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 420px;
+  padding: 28px;
+  background: rgba(255,255,255,0.55);
+  backdrop-filter: blur(18px);
+  border-radius: 26px;
+  box-shadow: 0 0 60px rgba(255,105,180,0.6);
+  color: #4a148c;
+  animation: rise 1.2s ease forwards;
+}
+
+.letter h1 {
+  color: #ad1457;
+  margin-bottom: 14px;
+}
+
+.letter p {
+  font-size: 16px;
+  line-height: 1.8;
+  white-space: pre-line;
+}
+
+.hidden {
+  display: none;
+}
+
+/* HEART DEPAN */
+.hearts span {
+  position: fixed;
+  bottom: -10px;
+  color: #ff4f9a;
+  pointer-events: none;
+  animation: floatUp linear infinite;
+}
+
+@keyframes rise {
+  from { transform: translate(-50%, 80%); opacity: 0; }
+  to { transform: translate(-50%, -50%); opacity: 1; }
+}
+
+@keyframes floatUp {
+  to { transform: translateY(-110vh); opacity: 0; }
+}

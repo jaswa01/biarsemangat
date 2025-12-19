@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surat untuk LULU</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="music" loop>
+  <source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Background Love -->
+<div class="bg-love" id="bgLove"></div>
+
+<div class="wrapper">
+  <div class="envelope" id="envelope" onclick="openLetter()">
+    <div class="flap"></div>
+    <div class="icon">💌</div>
+    <p>Klik suratnya 🤍</p>
+  </div>
+
+  <div class="letter hidden" id="letter">
+    <h1>💖 Untuk LULU</h1>
+    <p id="letterText"></p>
+  </div>
+</div>
+
+<div class="hearts" id="hearts"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
